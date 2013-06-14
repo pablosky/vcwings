@@ -36,21 +36,21 @@
 <br>
 <br>
 <br>
+<%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>     
 
 <div class="input-append">
 
-<%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>
-     
       
+
        
-        <%= text_field_tag(:name)   %>
+      <%= text_field_tag(:name)   %>
       
       <%= submit_tag "Search", :class=>"btn" %>
       
     
-    <% end %>
+    
  </div>
- 
+ <% end %>
 <br><br>
 
         <ul class="breadcrumb" >
