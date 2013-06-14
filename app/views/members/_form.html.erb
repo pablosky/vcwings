@@ -1,0 +1,28 @@
+
+<div class= "row">
+
+<%= simple_form_for([@startups, @startups.members.build]) do |f| %>
+ 
+
+<%= f.input :name, :url =>autocomplete_profiles_name_startup_members_path, :as=>:autocomplete %>
+
+
+
+
+<%= f.input :email   %>
+
+
+ <%= f.input :job %>
+
+
+ <%= f.input :mtype , :label =>'Member type' , :placeholder => 'Cofounder / Member' %>
+ 
+ <%= f.button :submit, :class => 'nice small radius blue button'  %>
+ 
+ <% end %>
+</div>
+
+
+
+
+

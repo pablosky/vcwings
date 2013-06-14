@@ -1,0 +1,21 @@
+<h1> My investments </h1>
+
+
+<!--
+ --><% @startups.each  do |startup| %>
+<div class= "row-fluid">
+
+
+<div class="span6">
+
+
+<%= image_tag startup.avatar_url(:thumb).to_s %>
+
+
+
+</div>
+
+<div class="span6"><h2 class ="subheader"><%= link_to startup.name , startup_path(startup) %> </h2></div>
+
+
+</div><% end %>

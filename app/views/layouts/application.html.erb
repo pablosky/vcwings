@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+
+<head>
+	<meta charset="utf-8" />
+	
+	<!-- Uncomment to make IE8 render like IE7 -->
+	<!-- <meta http-equiv="X-UA-Compatible" content="IE=7" /> -->
+	
+	<!-- Set the viewport width to device width for mobile -->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+	<title><%= content_for?(:title) ? yield(:title) : "VcWings" %></title>
+  
+
+  
+ 
+
+	<!-- Included CSS Files -->
+	<%= stylesheet_link_tag    "application" %>
+	
+  
+	<%= javascript_include_tag "application" %>
+  
+  <%= csrf_meta_tags %>
+</head>
+<body>
+
+<header>
+<center>
+<!--<%= link_to image_tag("http://25.media.tumblr.com/tumblr_m7diowBmIr1qm5n7fo1_400.png") , root_path %>
+
+<%= link_to image_tag("http://25.media.tumblr.com/tumblr_m9qbijw5zE1qm5n7fo1_400.png") , root_path %>-->
+<div id="image">
+<%= link_to image_tag("http://24.media.tumblr.com/tumblr_m9rbltGcoB1qm5n7fo1_400.png") , root_path , :size =>"100x50"%>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<div class="input-append">
+
+<%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>
+     
+      
+       
+        <%= text_field_tag(:name)   %>
+      
+      <%= submit_tag "Search", :class=>"btn" %>
+      
+    
+    <% end %>
+ </div>
+ 
+<br><br>
+
+        <ul class="breadcrumb" >
+
+              <% if signed_in? %>
+              <li>&nbsp;<%= link_to "Dashboard ", dashboard_path %><span class="divider">/</span></li> 
+
+              <li>&nbsp;&nbsp;<%= link_to " Profile  ",  :controller => :profiles , :action => :myprofile , :id=> current_user.id %><span class="divider">/</span></li>
+
+             
+              <li>&nbsp;<%= link_to " My Startups ", :controller => :startups , :action => :mystartups , :id=> current_user.id %><span class="divider">/</span></li>
+             
+
+              <li>&nbsp;&nbsp;<%= link_to " Create Startup  ", new_startup_path(@startup)   %><span class="divider">/</span></li>
+              
+               <li>&nbsp;<%= link_to " My Investments  ", :controller => :investments , :action => :myinvestments , :id=> current_user.id   %><span class="divider">/</span></li>
+
+              <li>&nbsp;<%= link_to "Sign out   ", sign_out_path, :method => :delete %> <span class="divider">/</span></li>
+              
+             
+             
+               
+          <% else %>
+              <li>&nbsp;<%= link_to "Login ", sign_in_path %><span class="divider">/</span></li>
+
+              <li>&nbsp;<%= link_to " Join   ", sign_up_path %> <span class="divider">/</span></li>
+
+               <li>&nbsp;<%= link_to " Face " ,"http://www.facebook.com"  %> <span class="divider">/</span></li>
+          <% end %>         
+
+
+
+
+
+              <li> </li>
+
+
+
+
+      </ul>
+   
+  
+
+
+
+
+ 
+
+
+
+
+
+
+</center>
+</header> <!-- fin del header -->
+
+
+
+
+ 
+
+
+
+  <div class="container">
+  <%= yield %>
+  </div>
+  
+
+
+
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+

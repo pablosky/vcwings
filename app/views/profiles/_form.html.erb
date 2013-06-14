@@ -1,0 +1,14 @@
+<%= simple_form_for @profile, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :fullname %><br>
+  <%= f.input :email %><br>
+  <%= f.input :country %><br>
+  <%= f.input :biography %><br>
+  
+  <%= f.input :avatar %><br>
+  
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                profiles_path, :class => 'btn' %>
+  </div>
+<% end %>

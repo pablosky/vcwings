@@ -1,0 +1,55 @@
+<div class="row">
+<div class="row-fluid">
+
+<br><br>
+<div class="span3">
+	
+<% if @profile.avatar? %>
+<div id="image">
+<%= image_tag @profile.avatar_url(:thumb).to_s  %>
+
+</div>
+
+<% else %>
+<div id="image">
+<%= image_tag "http://mashwork.com/blog/wp-content/uploads/2012/06/Unknown-person2.gif" %>
+</div>
+<% end %>
+</div> <!-- fin del div 3 -->
+
+
+<div class="span8">
+
+<h4 class ="subheader"><%= @profile.fullname %> / <%= @profile.country %></h4>
+<h5 class ="subheader"><br>Contact: <%= @profile.email %><br>
+
+BIO :<%= @profile.biography %><br><br><br>
+
+
+My wallet : <%= @profile.wallet %><br><br><br>
+
+Where i Work (My startups) <br><br><br>
+
+
+Where i Invest (My Investments)
+</h5>
+
+
+
+
+</div> <!-- fin de 8 culumns -->
+
+<div class="span1">
+
+<%= link_to "EDIT MY PROFILE" , edit_profile_path(@profile) %>
+
+</div>
+
+
+</div>
+</div><br><br><br><br>
+
+<center><%= link_to "Dashboard", dashboard_path %></center>
+
+
+<br><br><br>

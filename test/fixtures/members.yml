@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  mtype: MyString
+  job: MyString
+  startup: 
+  user: 
+
+two:
+  mtype: MyString
+  job: MyString
+  startup: 
+  user: 

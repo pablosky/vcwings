@@ -1,0 +1,246 @@
+<br><br><br><br>
+
+<center>ABOUT(+) &nbsp;&nbsp;  CATEGORIES </center>
+
+<br><br>
+
+<div class="row">
+
+<div class="row panel collapse">   
+
+
+
+
+<div class="four columns"> 
+
+<div class="image_container"><%= link_to image_tag("http://24.media.tumblr.com/tumblr_m9rbltGcoB1qm5n7fo1_400.png") , root_path , :size =>"100x50" ,:align=>"left"%></div>
+
+
+
+</div>
+
+<!--buscador-->
+<div class="four columns">   
+	<br><br><br><br><center>
+<%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>
+  <div class="row collapse" align="right"  valign="50%">
+      
+      <div class="eight mobile-three columns">
+        <%= text_field_tag(:name) %>
+      </div>
+      <div class="four mobile-one columns">
+         <%= submit_tag "Search" ,:class=>"postfix button expand"%>
+      </div>
+
+    </div>
+    <% end %></center>
+ </div>
+
+<!--login-->
+
+<div class="two columns">  
+<br><br><br><br>
+
+<center>
+<ul class="button-group [radius, rounded]">
+<li><a href="#" class="button small radius" data-reveal-id="myModal2" align="right">Login</a>  </li>
+
+ <li> <a href="#" class="button small radius" data-reveal-id="myModal3" align="left">Sign Up</a> </li>
+</ul>
+</center>
+
+ </div>
+<!--login-->
+
+
+
+
+
+
+
+</div>
+
+
+ 
+
+
+</div>
+
+
+<br><br><br>
+
+
+<div class="row">
+<div class="row nine columns centered panel2"> <center>
+
+<h4>     YOUR STARTUP NEEDS A RIDE THROUGH THE VENTURE CAPITAL ROAD? WE GIVE YOU THE WINGS TO SUCCEED!     </h4>
+
+</center></div>
+</div>
+
+<br><br><br>
+<div class="row">
+<div class="row nine columns centered "> <center>
+
+<iframe align="center" src="http://player.vimeo.com/video/39679411" width="580" height="375" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> <p><a href="http://vimeo.com/39679411">Start-Up Chile Video Pitch</a> from <a href="http://vimeo.com/vcwings">VCWings.com</a> on <a href="http://vimeo.com">Vimeo</a>.</p>
+
+</center></div>
+</div>
+
+
+<div class="row">
+<div class="row nine columns centered panel2"> <center>
+
+<h2> What is VcWings? </h2>
+
+</center></div>
+</div>
+
+
+<br><br>
+
+
+
+
+<div class="row collapse">
+<div class="row eleven columns centered ">
+
+
+
+
+<center>
+
+
+
+<div class="row three columns pills"> 
+<h5>Investors Simulation</h5>
+</div></center>
+
+<div class="row one column offset-by-one">&nbsp;&nbsp;  </div>
+
+<center>
+<div class="row three  columns pills"> 
+<h5>Global Startup Network</h5>
+
+</div></center>
+
+<div class="row one column offset-by-one">  &nbsp;&nbsp;  </div>
+
+
+<center>
+
+
+<div class="row three  columns pills "> 
+<h5>Social Feedback</h5>
+
+</center></div>
+
+
+
+
+
+</center>
+
+</div>
+</div>
+
+<br>
+
+
+<!-- comienzo de los q van abajo de estos-->
+
+
+
+<div class="row collapse">
+<div class="row eleven columns centered ">
+
+
+
+
+<center>
+
+
+
+<div class="row three columns cuadro"> 
+
+</div></center>
+
+<div class="row one column offset-by-one">&nbsp;&nbsp;  </div>
+
+<center>
+<div class="row three  columns cuadro"> 
+
+
+</div></center>
+
+<div class="row one column offset-by-one">  &nbsp;&nbsp;  </div>
+
+
+<center>
+
+
+<div class="row three  columns cuadro "> 
+
+</center></div>
+
+
+
+
+
+</center>
+
+</div>
+</div>
+
+
+<br><br><br>
+
+<center>
+<div class="row">
+<div class="row seven columns centered panel2 collapse">
+
+
+
+<h2> Latest Startups   </h2>
+
+</div>
+</div>
+</center>
+
+<br><br>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div id="myModal2" class="reveal-modal [small]">
+  <%= form_for :session, :url => session_path do |form| %>
+  
+    <%= form.label :email %>
+    <%= form.text_field :email, :type => "email" , :class=>"input"%>
+  
+ 
+    <%= form.label :password %>
+    <%= form.password_field :password %>
+  
+    <%= form.submit "Sign in" %>
+ 
+<% end %>
+</div>
+
+
+

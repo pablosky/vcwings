@@ -1,0 +1,30 @@
+<h1 class="subheader
+"> Results</h1>
+
+<% if flash[:snotice] %>
+     <h1 class="notice subheader">ERROR: <%= flash[:snotice] %></h1><BR>
+ <% end %>
+
+
+
+<% @search.each do |search| %>
+
+<div class="row-fluid ">
+
+<div class ="span4">
+<%= link_to (image_tag search.avatar_url(:thumb).to_s) , search %>
+</div>
+<div class ="span4">
+
+<br><br><br><br><h2 class="subheader"><%=link_to search.name , search %> </h2>
+</div>
+<div class ="span4">
+<br><br><br><br><h2 class="subheader"><%= search.country %> </h2>
+</div>
+
+
+
+</div>
+<% end %>
+
+

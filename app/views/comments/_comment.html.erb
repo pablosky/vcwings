@@ -1,0 +1,20 @@
+
+
+
+ <h6 class="subheader"> <%= comment.commenter %> </h6>
+
+ 
+
+  <b>Said:</b>
+  <h6 class="subheader"><%= comment.body %></h6>
+
+  <BR>
+
+  likes:	<%= comment.like %> 
+   no likes: <%= comment.nolike %> 
+
+
+  <%= link_to "like", :controller => :comments, :action => :like , :idea => comment.id %></td>
+                      
+
+ <%= link_to "NO like", :controller => :comments, :action => :nolike , :ide => comment.id %></td> 

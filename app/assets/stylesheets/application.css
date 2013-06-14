@@ -1,0 +1,191 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+  =require twitter-bootstrap-static/bootstrap
+  =require twitter-bootstrap-static/fontawesome
+ 
+ 
+ */
+
+
+
+.breadcrumbs {
+
+
+height: 32px;
+}
+.panel {
+
+/*background-color: #801F1F;*/
+background-color: #A9D0F5;
+height: 180px;
+width: 85%;
+align:center;    
+border-width: .2em; 
+border-style: solid; 
+
+ /*  border-color: #A4A4A4;*/
+border-color:white;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+
+.panel2 {
+
+
+/*background-color: #A9D0F5;*/
+height: 70px;
+width: 85%;
+align:center;    
+border-width: .2em; 
+border-style: solid; 
+
+   border-color: #A4A4A4;
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+}
+
+
+.pills {
+
+
+/*background-color: #A9D0F5;*/
+height: 40px;
+width: 170px;
+border-width: .2em; 
+border-style: solid; 
+
+border-color: #A4A4A4;
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+border-bottom-left-radius: 25px;
+}
+
+.cuadro{
+
+
+/*background-color: #A9D0F5;*/
+height:170px;
+width: 170px;
+border-width: .2em; 
+border-style: solid; 
+
+border-color: #A4A4A4;
+border-top-left-radius: 25px;
+border-top-right-radius: 25px;
+border-bottom-right-radius: 25px;
+border-bottom-left-radius: 25px;
+}
+
+
+
+
+
+
+
+
+
+
+#div_show {
+
+ border-style: solid; 
+ border-color: #A9D0F5;
+ border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+border-bottom-right-radius: 15px;
+border-bottom-left-radius: 15px;
+
+}
+
+
+
+
+
+#user_password {width: 190px; }
+
+
+
+h6 {
+
+font-color: #848484;
+
+}
+
+
+
+
+#startup_header {
+
+border-width: .2em; 
+
+border-style: solid; 
+
+border-color: #A4A4A4; 
+
+/*border-color:#801F1F;*/
+
+
+border-top-left-radius: 15px;
+border-top-right-radius: 15px;
+
+
+}
+
+#main_div {
+
+border-width: .2em; 
+
+border-style: solid; 
+/*border-color:#801F1F;*/
+border-color: #A4A4A4; 
+
+padding: 1%;
+
+
+}
+
+#image {
+
+/*border-width: .2em; 
+
+border-style: solid; 
+border-color:#801F1F;
+border-color: #A4A4A4; */
+
+padding: 1%;
+
+height: 105px;
+
+}
+
+
+
+
+  
+
+
+}
+
+.glyph  {
+
+font-size:20px;
+
+}
+
+
+.image_container img {
+  width: 200px;
+  height: 135px
+}

@@ -1,0 +1,40 @@
+
+<div class="row">
+<h2 class="subheader" > My startups </h2>
+
+
+
+
+
+
+<% @startups.each  do |startup| %>
+
+<tr>
+<td><h4 class="subheader" ><%= startup.name %></h4> </td>
+
+<td > <%= link_to "Show" , startup_path(startup) , :class=>"btn" ,:style=>"green" %> </td>
+<% if can?  :update, startup %>
+<td><%= link_to t('.edit', :default => t("helpers.links.edit")),
+                      edit_startup_path(startup), :class => 'btn' %></td><% end %>
+   
+<% if can?  :create, startup.activities %>   
+<td>    <%= link_to "New activity ", new_startup_activity_path(startup) , :class=>"btn" %>       </td>
+<% end %>
+
+<% if can?  :create, startup.members %>  
+<td><%= link_to "Add Member", new_startup_member_path(startup ) ,:class=>"btn" %> </td>
+ <% end %>
+
+<% if can?  :destroy, startup %>  
+<td>       <%= link_to t('.destroy', :default => t("helpers.links.destroy")),
+                      startup_path(startup),
+                      :method => :delete,
+                      :confirm => t('.confirm', :default => t("helpers.links.confirm", :default => 'Are you sure?')),
+                      :class => 'button alert' %></td><% end %>
+
+
+
+ </tr>
+<% end %>
+
+</div><br> <br>

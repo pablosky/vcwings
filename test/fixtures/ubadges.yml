@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  earlyadapt: 1
+  advangel: 1
+  ffather: 1
+  vetinvestor: 1
+  feedmaster: 1
+  voiceofwisdom: 1
+  knowit: 1
+  moneywise: 1
+  user: 
+
+two:
+  earlyadapt: 1
+  advangel: 1
+  ffather: 1
+  vetinvestor: 1
+  feedmaster: 1
+  voiceofwisdom: 1
+  knowit: 1
+  moneywise: 1
+  user: 

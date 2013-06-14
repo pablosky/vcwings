@@ -1,0 +1,43 @@
+
+<div class="row">
+
+<%= simple_form_for @startup do |f|  %>
+
+
+
+  <%= f.input :name %><br><br>
+  <%= f.input :video %><br><br>
+  <%= f.input :description %><br>
+  <%= f.input :website %><br><br>
+
+
+
+ 
+  <%= f.input :category %><br><br>
+  <%= f.input :country %><br><br>
+  <%= f.input :stage %><br><br>
+  <%= f.input :revenue %><br><br>
+  <%= f.input :semail %><br><br>
+
+ <label > Upload Photo</label>
+<%= f.file_field :avatar ,  :class => "nice radius button success small"  %>
+
+
+ <br>
+ <br>
+ <br>
+
+    
+
+
+<div class="row" >
+
+<%= f.button :submit , :class => 'nice small radius blue button' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                startups_path, :class => 'button' %>
+</div>
+
+
+ 
+  <% end %>
+</div>

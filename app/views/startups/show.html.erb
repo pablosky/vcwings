@@ -1,0 +1,135 @@
+
+
+
+
+<div class ="row" >
+
+<div id = "startup_header" class="row">  
+
+    <div class = "row-fluid"> 
+    
+    <div class ="span4 "><h1 class="subheader"><strong>&nbsp;<%= @startup.name %>&nbsp;</strong></h1></div>
+
+     <div class ="span7"><h3 class="subheader"><%= @startup.category %> / <%= @startup.country %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</h3> </div>
+
+     <div class="span1"></div>
+
+    </div> <!-- fin del colapse -->
+
+</div> <!-- fin del row header -->
+
+<div id="main_div" class="row">
+<br><br>
+<div class="row-fluid"> <!-- primer colapse del main -->
+
+<div class="span4" id="about">
+
+
+
+    <% if @startup.avatar? %>   
+
+    <%= link_to (image_tag @startup.avatar_url(:thumb).to_s) , @startup  %> <br>
+
+      <% else %>
+
+     <%= image_tag "http://1.bp.blogspot.com/_XMM7tFwUIT8/TDphHpHSZCI/AAAAAAAAAFA/tAlDFDODwKI/s1600/29.jpg" , :size=>"200x200"%>
+
+      <% end %>
+
+
+<!-- boton de invertir en ella -->
+
+
+ <%= link_to "Invest here " , new_startup_investment_path(@startup),:class=>"btn " %>
+
+
+<h4 class="subheader"><u>About</u></h4>
+<h5 class="subheader">
+" <%= @startup.description %> "
+</h5> <br> 
+<h4 class="subheader"><u>Web </u></h4>
+ <h5 class="subheader"><a href ="http://<%= @startup.website %>"><%= @startup.website %></a></h5>
+
+<h4 class="subheader"><u>Contact </u></h4>
+ <h5 class="subheader"><%= @startup.semail %></h5>
+ 
+ <h4 class="subheader"><u>Members </u></h4>
+ <%= render @startup.members %>
+ <br>&nbsp;
+
+</div>
+
+
+
+
+
+
+
+<div class="span8"><center>
+<iframe src="http://player.vimeo.com/video/<%= @startup.video %>" width="500" height="280" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+
+<br>
+
+<center><h4 class="subheader">VC Money raised :<%= @startup.vmoney %> </h4></center>
+
+
+
+<!--<h4 class="subheader">Comments</h4>-->
+
+<%= render @startup.comments %>
+
+
+<br>
+
+<% if signed_in? %>
+<%= form_for([@startup, @startup.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.hidden_field :commenter , :value => current_user.email  %>
+  </div>
+  <h4 class="subheader"> FeedBack </h4>
+   <div class="field">
+      <%= f.text_area :body , :class=>"text_area"%>
+    <%= f.hidden_field :startup_id , :value => @startup.id  %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit , :class => 'nice small radius blue button' , :id =>"Comment" %>
+  </div>
+<% end %>
+</div>
+
+<%end%>
+
+
+
+</div>
+
+
+
+</div>
+<!-- <div class="four columns">
+<h3>Comments</h3>
+<%= render @startup.comments %>
+
+<% if signed_in? %>
+<%= form_for([@startup, @startup.comments.build]) do |f| %>
+  <div class="field">
+    <%= f.hidden_field :commenter , :value => current_user.email  %>
+  </div>
+  <div class="field">
+    <%= f.label :Comment %><br />
+    <%= f.text_area :body %>
+    <%= f.hidden_field :startup_id , :value => @startup.id  %>
+  </div>
+  <div class="actions">
+    <%= f.button :submit , :class => 'nice small radius blue button'%>
+  </div>
+<% end %>
+</div>
+
+<%end%>
+ -->
+
+
+
+</div> <!-- fin del div main -->
+</div> <!-- fin del div principal -->

@@ -1,0 +1,76 @@
+<% if flash[:notice] %>
+     <h1 class="notice subheader">ERROR: <%= flash[:notice] %></h1><BR>
+ <% end %>
+
+
+
+
+
+
+
+
+
+<!--
+
+<div class="row" align="center">
+	<div class="row"><div class="five columns">
+<h1 class="subheader">Dashboard  <h1>
+
+<div class="orbit-wrapper" style="width: 300px ; height :300px" >
+
+<div id="featured" class="orbit" "width: 300px ; height :300px" >
+<img src="http://www.fotosyfondos.com/wp-content/uploads/2009/10/paisajes.jpg"  alt="j" class="orbit-slide fluid-placeholder" />
+
+  <img src="http://www.fotosyfondos.com/wp-content/uploads/2009/10/paisajes.jpg"  alt="j" class="orbit-slide" />
+
+
+ <img src="http://www.viajespasion.com/wp-content/uploads/2010/03/Paisaje-Costero-640x480.jpg" alt="w" class="orbit-slide" />
+
+
+<img src="http://www.pasarlascanutas.com/fondos%20de%20pantalla/paisaje_amanecer_Caribe/fondos/paisaje_amanecer_Caribe_640x480.JPG" alt="asd" class="orbit-slide"  />
+
+
+<div class="timer" style="width: 0px ; height :0px">
+<span class="mask move">
+<span class="rotator move" style="-webkit-transform: rotate(358deg); "></span>
+</span>
+<span class="pause active"></span>
+</div>
+<div class="orbit-caption" style="width: 0px ; height :0px"></div>
+
+
+
+</div>
+<br> -->
+
+
+<h1> STARTUPS RANDOM SOLO JUEGO <h1>
+
+<% @startups.each do |startup| %>
+
+
+<%= link_to (image_tag startup.avatar_url(:thumb).to_s) , startup  %> 
+
+
+<% end %>
+
+
+
+
+
+
+
+
+
+</div>
+</div>
+</div>
+
+</div>
+
+
+
+
+
+
+

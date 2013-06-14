@@ -1,0 +1,17 @@
+
+<div class="row">
+
+<h3> Upload profile Photo  </h3>
+
+<%= form_for @profile do |f| %>
+  <%= f.file_field :avatar %>
+
+  <%= f.button :submit , :class => 'nice small radius blue button' %>
+
+<% end %>
+
+
+
+
+
+</div>

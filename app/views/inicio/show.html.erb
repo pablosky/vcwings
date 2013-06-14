@@ -1,0 +1,58 @@
+
+
+<div class="row-fluid">
+
+
+	<div class="span6 thumbnail">
+	<iframe align="left" src="http://player.vimeo.com/video/39679411" width="500" height="281" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe> 
+	</div>
+
+<div class="span5"><br><br><br>
+	<div id="div_show">
+	<center><h2 class="subheader" >VcWings with :<br><%= @s %> Startups,<br> and <%= @e %> Entrepeneurs <br>
+	</h2></center></div>
+</div>
+
+<div class="span1"></div>
+
+</div>
+
+
+
+<div class="row-fluid">
+
+
+<ul class="thumbnails-fluid">
+	
+ <h3 class="subheader"><u>Latest Startups</u> </h3>
+<% @startups.each do |startup| %>
+
+
+
+
+	<li class="span2">
+		<div class="thumbnail">
+
+
+
+       <% if startup.avatar? %>   
+
+	  <%= link_to (image_tag startup.avatar_url(:thumb).to_s) , startup  %> <br>
+
+      <% else %>
+
+     <%= image_tag "http://1.bp.blogspot.com/_XMM7tFwUIT8/TDphHpHSZCI/AAAAAAAAAFA/tAlDFDODwKI/s1600/29.jpg"  , :size=>"200x200"%>
+
+      <% end %><br>
+
+      <h2 class="subheader"><%=link_to startup.name , startup %></h2>
+</li>
+
+
+<% end %>
+   </ul>
+<br>
+</div>
+<br>
+ <!-- fin del each -->
+
