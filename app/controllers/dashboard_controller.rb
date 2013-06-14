@@ -23,7 +23,7 @@ before_filter :authorize
   #@search = Startup.find_by_name(params[:name]) 
   @search = Startup.search(params[:name]) #este devuelve [] vacio
  
- if  @search == []
+ if  @search == nil
 
      flash[:snotice] = "No startups with that criteria"
      
