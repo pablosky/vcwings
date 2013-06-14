@@ -4,7 +4,7 @@ gem 'rails', '3.2.6'
 gem "clearance"
 gem 'carrierwave'
 
-
+gem 'simple_form'
 gem "mini_magick"
 gem 'rails3-jquery-autocomplete'
 gem "friendly_id"
