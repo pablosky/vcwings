@@ -127,8 +127,7 @@ GEM
       hike (~> 1.2)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.7-x86-mingw32)
-    subexec (0.2.2)
+      subexec (0.2.2)
     therubyracer (0.11.0beta1-x86-mingw32)
       ref
     thor (0.16.0)
@@ -164,7 +163,6 @@ DEPENDENCIES
   rails (= 3.2.6)
   rails3-jquery-autocomplete
   simple_form
-  sqlite3
   therubyracer
   twitter-bootstrap-rails
   uglifier (>= 1.0.3)
