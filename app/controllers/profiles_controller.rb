@@ -19,6 +19,7 @@ def create
 @user = current_user
 @profile = Profile.new(params[:profile])	
 @profile.wallet = 40000
+@profile.user_id =current_user.id
 
 if @profile.save
 
@@ -63,6 +64,9 @@ def edit
     end
   end
 
+
+
+
 def myprofile
 
 
@@ -75,10 +79,10 @@ def myprofile
      flash[:notice] = "You have no profile please create one"
      redirect_to new_profile_path(@profile) 
    
-   elsif @profile.user_id != current_user.id
+  # elsif @profile.user_id != current_user.id
 
-    flash[:notice] = "You only can access to ur profile!"
-    redirect_to dashboard_path
+   # flash[:notice] = "You only can access to ur profile!"
+    #redirect_to dashboard_path
 
   end
   

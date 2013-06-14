@@ -55,7 +55,7 @@ def index
    if @profile == nil
    
      flash[:notice] = "You have no profile please create one please create one before creating a startup"
-    
+    redirect_to new_profile_path(@profile) 
 
    #hay q inicializar el vmoney si
    
@@ -70,7 +70,7 @@ def index
       @member.job ="CEO"
 
 
-      @profile = Profile.find_by_user_id(current_user.id)
+      
      
       @member.email = @profile.email
       @member.name = @profile.fullname

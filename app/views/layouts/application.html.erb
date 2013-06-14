@@ -58,7 +58,7 @@
               <% if signed_in? %>
               <li>&nbsp;<%= link_to "Dashboard ", dashboard_path %><span class="divider">/</span></li> 
 
-              <li>&nbsp;&nbsp;<%= link_to " Profile  ",  :controller => :profiles , :action => :myprofile , :id=> current_user.id %><span class="divider">/</span></li>
+              <li>&nbsp;&nbsp;<%= link_to " Profile  ",  :controller => :profiles , :action => :myprofile , :id=>current_user.id %><span class="divider">/</span></li>
 
              
               <li>&nbsp;<%= link_to " My Startups ", :controller => :startups , :action => :mystartups , :id=> current_user.id %><span class="divider">/</span></li>
