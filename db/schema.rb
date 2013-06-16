@@ -14,13 +14,7 @@
 ActiveRecord::Schema.define(:version => 20121120185141) do
 
   
-  create_table "albums", :force => true do |t|
-    t.string   "name"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
-
-
+ 
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
@@ -72,16 +66,9 @@ ActiveRecord::Schema.define(:version => 20121120185141) do
   add_index "members", ["startup_id"], :name => "index_members_on_startup_id"
   add_index "members", ["user_id"], :name => "index_members_on_user_id"
 
-  create_table "photos", :force => true do |t|
-    t.integer  "album_id"
-    t.string   "name"
-    t.text     "description"
-    t.string   "avatar"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
-  end
+  
 
-  add_index "photos", ["album_id"], :name => "index_photos_on_album_id"
+  
 
   create_table "profiles", :force => true do |t|
     t.string   "fullname"
