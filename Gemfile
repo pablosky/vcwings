@@ -21,7 +21,7 @@ gem 'pg'
 #gem 'sqlite3'
 gem 'country_select'
 gem 'carrierwave'
-
+gem 'public_activity'
 gem 'cloudinary'
 gem 'therubyracer'
 gem 'less-rails' 
