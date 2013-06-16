@@ -28,7 +28,7 @@
 
     <% if @startup.avatar? %>   
 
-    <%= link_to (image_tag @startup.avatar_url(:thumb).to_s) , @startup  %> <br>
+    <%= image_tag(@startup.file_url , :style=>"height:200px; width:300px;")     %> <br>
 
       <% else %>
 
