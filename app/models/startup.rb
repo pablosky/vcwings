@@ -10,7 +10,7 @@ attr_accessible :name, :video, :vmoney , :website ,:founder , :description ,:web
 has_many :members
 has_many :users , :through => :members
 has_many :comments
-has_many :activities
+#has_many :activities #comentado para el uso de la gema publicactivity
 has_many :investments
 
 mount_uploader :avatar, AvatarUploader
