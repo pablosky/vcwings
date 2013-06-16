@@ -1,5 +1,4 @@
-<h1 class="subheader
-"> Results</h1>
+<h1 class="subheader"> Results</h1>
 
 <% if flash[:snotice] %>
      <h1 class="notice subheader">ERROR: <%= flash[:snotice] %></h1><BR>
@@ -9,10 +8,10 @@
 
 <% @search.each do |search| %>
 
-<div class="row-fluid ">
+<div class="row ">
 
 <div class ="span4">
-<%= link_to (image_tag search.avatar_url(:thumb).to_s) , search %>
+<%= image_tag(search.avatar_url , :style=>"height:200px; width:300px;")   if search.avatar  %>
 </div>
 <div class ="span4">
 
