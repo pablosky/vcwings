@@ -1,0 +1,19 @@
+---
+development:
+  cloud_name: bogdecom
+  api_key: '337875239317137'
+  api_secret: s-EQgkCixyyNML8wEuajwF7GKqU
+  enhance_image_tag: true
+  static_image_support: false
+production:
+  cloud_name: bogdecom
+  api_key: '337875239317137'
+  api_secret: s-EQgkCixyyNML8wEuajwF7GKqU
+  enhance_image_tag: true
+  static_image_support: true
+test:
+  cloud_name: bogdecom
+  api_key: '337875239317137'
+  api_secret: s-EQgkCixyyNML8wEuajwF7GKqU
+  enhance_image_tag: true
+  static_image_support: false
