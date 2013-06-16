@@ -21,7 +21,7 @@ ActiveRecord::Schema.define(:version => 20121120185141) do
     t.datetime "updated_at",  :null => false
   end
 
-  add_index "albums", ["activity_id"], :name => "index_albums_on_activity_id"
+
 
   create_table "comments", :force => true do |t|
     t.string   "commenter"
