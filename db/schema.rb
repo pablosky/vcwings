@@ -15,7 +15,6 @@ ActiveRecord::Schema.define(:version => 20121120185141) do
 
   
   create_table "albums", :force => true do |t|
-    t.integer  "activity_id"
     t.string   "name"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
