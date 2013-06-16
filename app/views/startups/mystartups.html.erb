@@ -17,9 +17,7 @@
 <td><%= link_to t('.edit', :default => t("helpers.links.edit")),
                       edit_startup_path(startup), :class => 'btn' %></td><% end %>
    
-<% if can?  :create, startup.activities %>   
-<td>    <%= link_to "New activity ", new_startup_activity_path(startup) , :class=>"btn" %>       </td>
-<% end %>
+
 
 <% if can?  :create, startup.members %>  
 <td><%= link_to "Add Member", new_startup_member_path(startup ) ,:class=>"btn" %> </td>
