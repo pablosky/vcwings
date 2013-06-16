@@ -1,5 +1,7 @@
 class Startup < ActiveRecord::Base
 
+include PublicActivity::Model
+tracked
 
 
 include Rails.application.routes.url_helpers

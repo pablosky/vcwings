@@ -1,5 +1,7 @@
 class CommentsController < ApplicationController
 
+#@comment.create_activity :create , :owner current_user.id
+
 def new
 
  @comment  = Comment.new
@@ -18,7 +20,11 @@ end
 
 
   ##  
+
  @comment.save
+  @comment.create_activity :create , owner: current_user
+ 
+ 
  redirect_to startup_path(@startup)
 
 

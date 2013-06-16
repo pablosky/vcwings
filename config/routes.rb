@@ -1,10 +1,12 @@
 Prueba2::Application.routes.draw do
   
     
+  get "activities/index"
+
   #get 'members/autocomplete_profile_name' , :on => :collection
 
   
-
+  resources :activities
   resources :profiles 
   
   resources :startups do
