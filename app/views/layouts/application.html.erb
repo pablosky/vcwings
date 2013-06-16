@@ -27,9 +27,9 @@
 <header>
 <center>
 
-<div id="image">
-<%= link_to image_tag("http://24.media.tumblr.com/tumblr_m9rbltGcoB1qm5n7fo1_400.png") , root_path , :size =>"100x50"%>
-</div>
+
+<%= link_to image_tag("http://24.media.tumblr.com/tumblr_m9rbltGcoB1qm5n7fo1_400.png" ,:style=>"height:130px; width:150px;") , root_path %>
+
 
 <br>
 <br>
@@ -45,7 +45,7 @@
       <%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>
       <%= text_field_tag(:name)   %>
       
-      <%= submit_tag "Search", :class=>"btn" %><% end %>
+      <%= submit_tag "Search", :class=>"btn btn-info" %><% end %>
       </div>
     
     
