@@ -6,6 +6,11 @@
 
 <% @activities.each do |activity| %>
 
-  <%= activity.inspect %>
+<div class="row">
 
+  <%= activity.inspect %>
+<%= link_to "sadf" , "profiles/activity.owner" if activity.owner %>
+
+
+</div>
  <% end %> 

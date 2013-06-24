@@ -20,9 +20,9 @@ end
 
 
   ##  
-
+ 
  @comment.save
-  @comment.create_activity :create , owner: current_user
+ @comment.create_activity :create , owner: current_user
  
  
  redirect_to startup_path(@startup)
