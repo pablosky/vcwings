@@ -19,15 +19,27 @@ class ActivitiesController < ApplicationController
   
   #BUSCAR
 
-  #@members = Member.where("user_id = ?", params[:id])
+  @members = Member.where(user_id: current_user.id)# DONDE PERTENEZCO
 
-  #@startups_ids = @members.collect(&:startup_id)
+
+  @startups_ids = @members.collect(&:startup_id) #LAS STARTUPS DONDE PERTENEZCO
+ 
+  @comments = Comment.where(startup_id: @startups_ids) #LOS COMENTARIOS A MIS STARTUPS
+
+  @comments_ids = @comments.collect(&:id) #LOS IDS DE LOS COM
 
   #@startups = Startup.find(@startups_ids)
 
-  #@activities = PublicActivity::Activity.find_by_startup_id(@startups_ids)
+  #@activities = PublicActivity::Activity.find_by_trackable_id(@comments_ids)#LAS ACTIVIDADES RELACIONADAS CON ESOS COMENTARIOS
    
   
+  @activities = PublicActivity::Activity.where(trackable_id: @comments_ids )
+
+  
+
+  # me guarda la id del comentario trackable_id y del user owner
+
+
   end
 
 

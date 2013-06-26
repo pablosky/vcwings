@@ -3,6 +3,7 @@ Prueba2::Application.routes.draw do
     
   get "activities/index"
 
+  get 'activities/notificaciones'
   #get 'members/autocomplete_profile_name' , :on => :collection
 
   

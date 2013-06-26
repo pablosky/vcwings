@@ -1,0 +1,15 @@
+
+<h1>Activities#NOTIFICACIONES</h1>
+<p>Find me in app/views/activities/index.html.erb</p>
+
+
+<% @activities.each do |activity| %>
+
+<div class="row">
+
+  <%= activity.inspect %>
+  <%= link_to "sadf" , "profiles/activity.owner" if activity.owner %>
+
+
+</div>
+ <% end %> 
