@@ -1,6 +1,6 @@
 class User < ActiveRecord::Base
    include Clearance::User
-attr_accessible :role
+attr_accessible :role, :name
 
   # has_and_belongs_to_many :roles
    has_one :ubadge
@@ -11,5 +11,10 @@ attr_accessible :role
 
 
  ROLES = %w[admin moderator author banned]
+
+
+
+
+
 
 end

@@ -22,8 +22,9 @@ end
   ##  
  
  @comment.save
- @comment.create_activity :create , owner: current_user
- 
+
+ @profile = Profile.find_by_user_id(current_user.id)
+ @comment.create_activity :create , owner: @profile , recipient: @startup 
  
  redirect_to startup_path(@startup)
 

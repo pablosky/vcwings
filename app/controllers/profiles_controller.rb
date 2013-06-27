@@ -1,5 +1,7 @@
 class ProfilesController < ApplicationController
 
+include PublicActivity::StoreController
+
 before_filter :authorize , except: [:show]
 
 def index
@@ -20,9 +22,11 @@ def create
 @profile = Profile.new(params[:profile])	
 @profile.wallet = 40000
 @profile.user_id =current_user.id
+@user.name = @profile.name
 
 if @profile.save
 
+@user.save
 ## poner en cero todo lo de user badge
 
 
@@ -120,7 +124,21 @@ def uploadphoto
 
 redirect_to @profile
 
+end
+
+#metodo para mostrar perfil usando el user id
+
+def user
+
+  
+  @profile = Profile.find_by_user_id(params[:id])
+
 
 end
+
+
+
+
+
 
 end

@@ -1,15 +1,45 @@
 
-<h1>Activities#NOTIFICACIONES</h1>
-<p>Find me in app/views/activities/index.html.erb</p>
+<h1>NOTIFICACIONES</h1>
 
 
 <% @activities.each do |activity| %>
 
-<div class="row">
+<div class="row-fluid">
 
-  <%= activity.inspect %>
-  <%= link_to "sadf" , "profiles/activity.owner" if activity.owner %>
+
+<div class="span1">
+  
+
+    
+
+</div>
+
+
+<div class="span7">
+
+	 
+<%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+
+
+
 
 
 </div>
+
+<div class="span4">
+
+
+
+</div>
+
+
+
+
+ 
+
+
+
+</div>
+
+<br><br>
  <% end %> 
