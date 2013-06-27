@@ -31,7 +31,7 @@ def create
 
 #chequeo de que usuario no invierta en si mismo
 
-if @member == nil
+if @member == []
 
 
 
