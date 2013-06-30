@@ -64,7 +64,15 @@
       <%= form_tag ( {:controller => "dashboard" , :action => "search"} ) do %>
       <%= text_field_tag(:name) %>
       
-      <%= submit_tag "Search", :class=>"btn btn-info" %><% end %>
+      <button class='btn btn-info' style='width:40px;'>
+      <i class="icon-search"></i>
+      </button>
+
+
+
+
+
+      <% end %>
     </div>
 
   </div>
@@ -128,13 +136,14 @@
 
     <div class="span4"> <center>
 
-      <h2>UPLOAD YOUR STARTUP</h2><BR><BR></center>
+      <h2>UPLOAD YOUR STARTUP</h2>  <BR><BR></center>
     </div>
 
     <div class="span3"> <center>
 
      <h2>GAIN TRACKING</h2><br><div id="div_show">
      <h3 class="subheader" >VcWings with :<br><%= @s %> Startups,<br> and <%= @e %> Entrepeneurs <br>
+      <br>
     </h3></div> </center>
 
     </div>
