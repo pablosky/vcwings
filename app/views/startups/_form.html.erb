@@ -11,11 +11,11 @@
   <%= f.input :website %><br><br>
 
 
-
- 
-  <%= f.input :category %><br><br>
+ * Stage<br>
+ <%= f.select(:stage, [["Concept"], ["Working prototype in development"], ["Functional Product with Users"], ["Scaling Sales"]] )  %><br><br>
+  * Category<br>
+  <%= f.select(:category, [["Consulting"], ["E-commerce"], ["Education"], ["Energy & Clean Tech"] , ["Finance"], ["Healthcare & Biotechnology"], ["IT & Enterprise Software"], ["Import/Export"],["Mobile & Wireless"],["Natural Resources - mining, food, lumber, etc, "], ["Media"] , ["Social Enterprise"], ["Social Media/Social Network"], ["Tourism"], ["Sorry, we do not fit into any category above"]] ) %> <br><br>
   <%= f.input :country %><br><br>
-  <%= f.input :stage %><br><br>
   <%= f.input :revenue %><br><br>
   <%= f.input :semail %><br><br>
 

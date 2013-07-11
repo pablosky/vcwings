@@ -1,0 +1,2 @@
+module VcdashboardHelper
+end
