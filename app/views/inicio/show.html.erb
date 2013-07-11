@@ -1,9 +1,18 @@
 
 
 <div class="row-fluid" style="background-image:url('http://res.cloudinary.com/bogdecom/image/upload/v1372428743/fondo_ehhhse.png'); width:100%;">
+<br>
+ <div class="row-fluid">
+     <div class="span2"><br></div> 
+      <div class="span10">
+          <h3 class="subheader"style="color:white;"><li> Latest startups</li> </h3>
+      </div>
+     
+
+ </div>
 
 
-<center><br>
+<center>
 
 <div id="myCarousel" class="carousel slide"> 
   <ol class="carousel-indicators">
@@ -31,35 +40,124 @@
 
          <li class="span2">
             <div class="thumbnail" style="background-color:white;">
-               <img src="http://startupchile.org/wp-content/uploads/2013/03/RyP-Logo-Final.png" alt="" style="width:200px; height:113px;">
-             <h3>Thumbnail label</h3>
-            <p>Thumbnail caption...</p>
+              
+              <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[0].name , @startups[0]%><br>
+                      <%= @startups[0].category %><br>
+                      <%= @startups[0].country %><br>
+                  </div>
+
+              </div>
+
+              <% if @startups[0].avatar? %>   
+
+
+             <%= image_tag(@startups[0].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[0].description[0,100]  %>..</p>
+
+
           </div>
         </li>
   
       <li class="span2">
             <div class="thumbnail" style="background-color:white;">
-               <img src="http://startupchile.org/wp-content/uploads/2013/02/art-sumo-square-logo.jpg" alt="" style="width:200px; height:113px;">
-             <h3>Thumbnail label</h3>
-            <p>Thumbnail caption...</p>
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[1].name , @startups[1]%><br>
+                      <%= @startups[1].category %><br>
+                      <%= @startups[1].country %><br>
+                  </div>
+
+              </div>
+               <% if @startups[1].avatar? %>   
+
+
+             <%= image_tag(@startups[1].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[1].description[0,100]  %>..</p>
+
+
           </div>
         </li>
      <li class="span2">
             <div class="thumbnail" style="background-color:white;">
-               <img src="http://startupchile.org/wp-content/uploads/2013/03/LOGO-EPIG-GAMES.png" alt="" style="width:200px; height:113px;">
-             <h3>Thumbnail label</h3>
-            <p>Thumbnail caption...</p>
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[2].name , @startups[2]%><br>
+                      <%= @startups[2].category %><br>
+                      <%= @startups[2].country %><br>
+                  </div>
+
+              </div>
+               <% if @startups[2].avatar? %>   
+
+
+             <%= image_tag(@startups[2].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[2].description[0,100]  %>..</p>
+
+
           </div>
         </li>
         <li class="span2">
             <div class="thumbnail" style="background-color:white;">
-               <img src="http://startupchile.org/wp-content/uploads/2013/03/LOGO-EPIG-GAMES.png" alt="" style="width:200px; height:113px;">
-             <h3>Thumbnail label</h3>
-            <p>Thumbnail caption...</p>
-          </div>
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                         <%= link_to @startups[3].name , @startups[3]%><br>
+                      <%= @startups[3].category %><br>
+                      <%= @startups[3].country %><br>
+                  </div>
+
+              </div>
+               <% if @startups[3].avatar? %>   
+
+
+             <%= image_tag(@startups[3].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[3].description[0,100]  %>..</p>
+
+
         </li>
 
-      <li class="span2">
+         <li class="span2">
         </li>           
 
 
@@ -94,7 +192,7 @@
 
     <div class="span12"> 
  
-
+   <BR>
      <%= image_tag( "http://res.cloudinary.com/bogdecom/image/upload/v1372359065/friends_tewcj0.png")  %>
    <BR><BR>
 
@@ -102,6 +200,24 @@
 
 	</center>  
 </div>
+
+
+
+
+<div class"row-fluid">
+  <center>
+
+
+<img src="http://25.media.tumblr.com/24cef60f3ab779cabea6da4f0c767d4b/tumblr_mpshzkxgVr1qm5n7fo1_1280.png" style="width:100%;">
+
+
+
+</center
+
+</div>  
+
+
+
 
 
 
@@ -164,7 +280,7 @@
 <br>
  <!-- fin del each -->
  <div class="row-fluid">
-<ul class="thumbnails">
+ <ul class="thumbnails">
          <li class="span4">
             <div class="thumbnail">
                <img data-src="http://startupchile.org/wp-content/uploads/2013/03/RyP-Logo-Final.png" alt="sad">
@@ -189,5 +305,7 @@
         </li>
 
       </ul>
-    </div>
+</div>
 <br>
+
+<h1><%= @startups[1].name %></h1> 
