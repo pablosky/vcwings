@@ -137,10 +137,10 @@
 <header>
 <center>
 <br>
-
+        <% if signed_in? %>
         <ul class="breadcrumb" >
 
-              <% if signed_in? %>
+              
               <li>&nbsp;<%= link_to "Dashboard ", dashboard_path %><span class="divider">/</span></li> 
 
               <li>&nbsp;&nbsp;<%= link_to "My Profile  ",  :controller => :profiles , :action => :myprofile , :id=>current_user.id %><span class="divider">/</span></li>
@@ -158,13 +158,9 @@
              
              
                
-          <% else %>
-              <li>&nbsp;<%= link_to "Login ", sign_in_path %><span class="divider">/</span></li>
-
-              <li>&nbsp;<%= link_to " Join   ", sign_up_path %> <span class="divider">/</span></li>
-
-               <li>&nbsp;<%= link_to " Face " ,"http://www.facebook.com"  %> <span class="divider">/</span></li>
-          <% end %>         
+         
+              
+               
 
 
 
@@ -175,7 +171,7 @@
 
 
 
-      </ul>
+      </ul> <% end %>   
    
   
 

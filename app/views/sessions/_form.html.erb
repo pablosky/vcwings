@@ -1,0 +1,16 @@
+
+ 
+
+  <%= form_for :session, :url => session_path do |form| %>
+    <div class="text_field">
+      <%= form.label :email , 'EMAIL'%>
+      <%= form.text_field :email, :type => "email"  %>
+    </div>
+    <div class="text_field">
+      <%= form.label :password , 'PASSWORD' %>
+      <%= form.password_field :password %>
+    </div>
+    <div class="submit_field">
+    <p> <h5 style="color:grey;"> <%= link_to "Forgot password?", new_password_path %></h5> <%= form.submit "Sign in" , :class=>"btn btn-primary"%></p>
+    </div>
+  <% end %>
