@@ -1,0 +1,12 @@
+<div class= "row">
+
+<%= simple_form_for([@startups, @startups.investments.build]) do |f| %>
+ 
+
+<%= f.input_field :vcmoney , :label =>"amount" , :value =>" 20000" , :id=>"inputi"%>
+
+
+<%= f.button :submit, :class => 'nice small radius blue button' , :value=>"Invest"  %>
+ 
+ <% end %>
+</div>

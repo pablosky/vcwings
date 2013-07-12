@@ -63,7 +63,7 @@ def game
 
 @startups = Startup.order("random()").last(3)
 
-
+@investments = Investment.new
 
 end
 

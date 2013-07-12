@@ -28,7 +28,9 @@
 
 					<h3 style="color:#0088cc;">Startup Pitch</h3>
 
-					<%= @startups[0].description %> <br>
+					<%= @startups[0].description %> 
+
+					 <H3>_________________________________________________________</H3>
 
 					<h4 class="subheader"> FeedBack </h4>
    
@@ -61,6 +63,76 @@
 		</div>
 
 		<div class="span4" style="background-color:#f5f5f5;">
+
+			<br><br><br><br><br><br>
+			<div class="row">
+
+
+				<div class="row-fluid">
+					<div class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+					<div class="span9" style="background-color:#232323;">
+					
+					<h3 style="color:white;"><center>INVESTMENT</center> </h3>
+					<h3 style="color:white;">_____________________</h3>	
+					<br><center>
+					<%= simple_form_for([@startups[0], @startups[0].investments.build]) do |s| %>
+ 
+
+					<%= s.input_field :vcmoney , :label =>"amount" , :value =>" 20000" , :id=>"inputi"%>
+
+					<br>
+					<%= s.button :submit, :class => 'btn' , :value=>"Invest"  %>
+ 	
+ 					<% end %></center>
+ 					
+ 					</div>
+
+ 					<div class="span1"></div>
+
+ 				</div>
+ 				<br>
+ 				<div class="row-fluid">
+					<div class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
+
+					<div class="span9">
+					
+					<button class="btn btn-large btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RATE THIS STARTUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+ 					
+ 					</div>
+
+ 					<div class="span1"></div>
+
+ 				</div>
+
+
+
+
+
+
+ 				<br><br>
+ 				<center>
+ 				
+ 				</center>
+ 				<br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+ 			</div>
+
+
+
+
+ 		</div><!-- fin del row interior-->
+
+
+
 
 		</div>
 

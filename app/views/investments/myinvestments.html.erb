@@ -1,6 +1,6 @@
 <h1> My investments </h1>
 
-
+<div class="container">
 <!--
  --><% @startups.each  do |startup| %>
 <div class= "row-fluid">
@@ -9,7 +9,7 @@
 <div class="span6">
 
 
-<%= image_tag startup.avatar_url(:thumb).to_s %>
+<%= image_tag startup.avatar_url ,:style=>"width:100px;height:100px;"%>
 
 
 
@@ -19,3 +19,6 @@
 
 
 </div><% end %>
+
+
+</div>
