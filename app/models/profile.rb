@@ -1,12 +1,5 @@
 class Profile < ActiveRecord::Base
 
-
-
-
-
-
-
-
 belongs_to :user
 attr_accessible :biography, :country, :email, :fullname , :user_id , :avatar
 

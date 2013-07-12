@@ -59,6 +59,14 @@ def plata
 	
 end
 
+def game
+
+@startups = Startup.order("random()").last(3)
+
+
+
+end
+
 
 
 

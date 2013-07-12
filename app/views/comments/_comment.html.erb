@@ -1,20 +1,32 @@
 
 
-
- <h6 class="subheader"> <%= comment.commenter %> </h6>
-
+ <div class="row-fluid">
  
+ 	<div class="span1">
+   
+     <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style="width:50px;height:50px;">
+ 	</div>	
+ 	
 
-  <b>Said:</b>
-  <h6 class="subheader"><%= comment.body %></h6>
+ 	<div class="span11">
 
-  <BR>
+ 		<h6 class="subheader"> <%= comment.commenter %> </h6>
 
-  likes:	<%= comment.like %> 
-   no likes: <%= comment.nolike %> 
+ 	
 
+  		<b>Said:</b>
+  		<h6 class="subheader"><%= comment.body %></h6>
 
-  <%= link_to "like", :controller => :comments, :action => :like , :idea => comment.id %></td>
+  		<BR>
+  		<%= link_to "like", :controller => :comments, :action => :like , :idea => comment.id %>
                       
 
- <%= link_to "NO like", :controller => :comments, :action => :nolike , :ide => comment.id %></td> 
+ 		<%= link_to "NO like", :controller => :comments, :action => :nolike , :ide => comment.id %>
+
+  		likes:<%= comment.like %> 
+  		no likes: <%= comment.nolike %> 
+ 		</div>
+    </div>	
+
+<BR>
+  

@@ -1,0 +1,73 @@
+
+
+<div class="container">
+	
+
+	<div class="row-fluid">
+
+		
+		<div class="span8">
+
+				<div class="row">
+
+					<div class="span2">	
+						<img src= <%= @startups[0].avatar_url%> style="width:100px;height:100px;">
+					</div>	
+					<div class="span10">	
+						<h1 style="color:#0088cc;"><%= @startups[0].name%></h1>
+						<p style="color:#0088cc;"><%= @startups[0].category%> &nbsp;&nbsp;<i class="icon-home"></i>&nbsp;&nbsp; <%= @startups[0].country%> </p>
+					</div>	
+
+				</div><!-- fin del row de head del span8-->
+
+				<div class="row">
+					<br>
+					<iframe src="http://player.vimeo.com/video/<%= @startups[0].video %>" width="100%" height="300px" frameborder="0" webkitAllowFullScreen mozallowfullscreen allowFullScreen></iframe>
+
+					<br>
+
+					<h3 style="color:#0088cc;">Startup Pitch</h3>
+
+					<%= @startups[0].description %> <br>
+
+					<h4 class="subheader"> FeedBack </h4>
+   
+  					<%= render @startups[0].comments %> <br>
+  
+
+ 
+ 					 <h4 class="subheader"> Comment </h4>
+  					<% if signed_in? %>
+  					<%= form_for([ @startups[0], @startups[0].comments.build]) do |f| %>
+  
+    				<%= f.hidden_field :commenter , :value => current_user.email  %>
+  
+
+      				<%= f.text_area :body , :style=>"height:74px;width:534px;"%>
+     				 <%= f.hidden_field :startup_id , :value => @startups[0].id  %><br> 
+  
+   
+      				<%= f.button :submit , :class => 'btn' , :id =>"Comment" %>
+  
+  <% end %> <!--fin del form -->
+
+  <%end%><!--fin del if -->
+
+
+
+
+			   </div>	<!-- fin del contenido-->
+
+		</div>
+
+		<div class="span4" style="background-color:#f5f5f5;">
+
+		</div>
+
+
+
+
+
+
+	</div> <!-- fin del row de todo el contenido-->
+</div> <!-- fin del container-->
