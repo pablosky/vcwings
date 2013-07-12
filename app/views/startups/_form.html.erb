@@ -1,5 +1,4 @@
 
-<div class="row">
 
 <%= simple_form_for @startup do |f|  %>
 
@@ -30,14 +29,10 @@
     
 
 
-<div class="row" >
+
 
 <%= f.button :submit , :class => 'nice small radius blue button' %>
     <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
                 startups_path, :class => 'button' %>
-</div>
 
-
- 
   <% end %>
-</div>
