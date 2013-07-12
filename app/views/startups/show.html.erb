@@ -34,9 +34,9 @@
             <%= render @startup.comments %> <br>
   
 
- 
+          <% if signed_in? %>
            <h4 class="subheader"> Comment </h4>
-            <% if signed_in? %>
+           
             <%= form_for([ @startup, @startup.comments.build]) do |f| %>
   
             <%= f.hidden_field :commenter , :value => current_user.email  %>
@@ -61,7 +61,9 @@
 
     <div class="span4" style="background-color:#f5f5f5;">
 
-        <%= @startup.vmoney %>
+
+        <br><br><br><br><br><br>
+        <h1>vc money : <%= @startup.vmoney %></h1>
 
 
     </div>
