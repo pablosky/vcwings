@@ -20,19 +20,7 @@
   </ol>
   <!-- Carousel items -->
   <div class="carousel-inner">
-    <div class="active item"><%= image_tag "http://startupchile.org/wp-content/uploads/2013/03/RyP-Logo-Final.png" , :style=>"width:457px;height:232px;" %>
-  </div>
-    <div class="item"><%= image_tag "http://startupchile.org/wp-content/uploads/2013/03/LOGO-EPIG-GAMES.png", :style=>"width:457px;height:232px;"  %>
-   </div>
-    <div class="item"><%= image_tag "http://startupchile.org/wp-content/uploads/2013/02/art-sumo-square-logo.jpg" ,:style=>"width:457px;height:232px;"  %>
-   </div>
-
-
-  <!-- poner thumbnails aca -->
- 
-    <div class="item">
-     
-      <ul class="thumbnails">
+    <div class="active item"><ul class="thumbnails">
 
 
         <li class="span2">
@@ -48,9 +36,9 @@
                   </div>
 
                   <div class="span9">
-                      <%= link_to @startups[0].name , @startups[0]%><br>
-                      <%= @startups[0].category %><br>
-                      <%= @startups[0].country %><br>
+                      <%= link_to @startups[0].name , @startups[0]%>
+                    <h5 style="color:#0088cc">  <%= @startups[0].category %><br>
+                      <%= @startups[0].country %><br></h5>
                   </div>
 
               </div>
@@ -79,9 +67,9 @@
                   </div>
 
                   <div class="span9">
-                      <%= link_to @startups[1].name , @startups[1]%><br>
-                      <%= @startups[1].category %><br>
-                      <%= @startups[1].country %><br>
+                      <%= link_to @startups[1].name , @startups[1]%>
+                      <h5 style="color:#0088cc"> <%= @startups[1].category %><br>
+                      <%= @startups[1].country %><br></h5>
                   </div>
 
               </div>
@@ -108,9 +96,9 @@
                   </div>
 
                   <div class="span9">
-                      <%= link_to @startups[2].name , @startups[2]%><br>
-                      <%= @startups[2].category %><br>
-                      <%= @startups[2].country %><br>
+                      <%= link_to @startups[2].name , @startups[2]%>
+                     <h5 style="color:#0088cc">  <%= @startups[2].category %><br>
+                      <%= @startups[2].country %><br></h5>
                   </div>
 
               </div>
@@ -137,9 +125,411 @@
                   </div>
 
                   <div class="span9">
-                         <%= link_to @startups[3].name , @startups[3]%><br>
-                      <%= @startups[3].category %><br>
-                      <%= @startups[3].country %><br>
+                         <%= link_to @startups[3].name , @startups[3]%>
+                     <h5 style="color:#0088cc"> <%= @startups[3].category %><br>
+                      <%= @startups[3].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[3].avatar? %>   
+
+
+             <%= image_tag(@startups[3].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[3].description[0,100]  %>..</p>
+
+
+        </li>
+
+         <li class="span2">
+        </li>           
+
+
+      </ul>
+ 
+  </div>
+    <div class="item"><ul class="thumbnails">
+
+
+        <li class="span2">
+        </li>  
+
+         <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+              
+              <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[0].name , @startups[0]%><br>
+                    <h5 style="color:#0088cc">  <%= @startups[0].category %><br>
+                      <%= @startups[0].country %><br></h5>
+                  </div>
+
+              </div>
+
+              <% if @startups[0].avatar? %>   
+
+
+             <%= image_tag(@startups[0].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[0].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+  
+      <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[1].name , @startups[1]%>
+                      <h5 style="color:#0088cc"> <%= @startups[1].category %><br>
+                      <%= @startups[1].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[1].avatar? %>   
+
+
+             <%= image_tag(@startups[1].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[1].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+     <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[2].name , @startups[2]%>
+                     <h5 style="color:#0088cc">  <%= @startups[2].category %><br>
+                      <%= @startups[2].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[2].avatar? %>   
+
+
+             <%= image_tag(@startups[2].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[2].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+        <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                         <%= link_to @startups[3].name , @startups[3]%>
+                     <h5 style="color:#0088cc"> <%= @startups[3].category %><br>
+                      <%= @startups[3].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[3].avatar? %>   
+
+
+             <%= image_tag(@startups[3].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[3].description[0,100]  %>..</p>
+
+
+        </li>
+
+         <li class="span2">
+        </li>           
+
+
+      </ul>
+ 
+   </div>
+    <div class="item"><ul class="thumbnails">
+
+
+        <li class="span2">
+        </li>  
+
+         <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+              
+              <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[0].name , @startups[0]%>
+                    <h5 style="color:#0088cc">  <%= @startups[0].category %><br>
+                      <%= @startups[0].country %><br></h5>
+                  </div>
+
+              </div>
+
+              <% if @startups[0].avatar? %>   
+
+
+             <%= image_tag(@startups[0].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[0].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+  
+      <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[1].name , @startups[1]%>
+                      <h5 style="color:#0088cc"> <%= @startups[1].category %><br>
+                      <%= @startups[1].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[1].avatar? %>   
+
+
+             <%= image_tag(@startups[1].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[1].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+     <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[2].name , @startups[2]%>
+                     <h5 style="color:#0088cc">  <%= @startups[2].category %><br>
+                      <%= @startups[2].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[2].avatar? %>   
+
+
+             <%= image_tag(@startups[2].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[2].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+        <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                         <%= link_to @startups[3].name , @startups[3]%>
+                     <h5 style="color:#0088cc"> <%= @startups[3].category %><br>
+                      <%= @startups[3].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[3].avatar? %>   
+
+
+             <%= image_tag(@startups[3].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[3].description[0,100]  %>..</p>
+
+
+        </li>
+
+         <li class="span2">
+        </li>           
+
+
+      </ul>
+ 
+   </div>
+
+
+  <!-- poner thumbnails aca -->
+ 
+    <div class="item">
+     
+      <ul class="thumbnails">
+
+
+        <li class="span2">
+        </li>  
+
+         <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+              
+              <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[0].name , @startups[0]%>
+                    <h5 style="color:#0088cc">  <%= @startups[0].category %><br>
+                      <%= @startups[0].country %><br></h5>
+                  </div>
+
+              </div>
+
+              <% if @startups[0].avatar? %>   
+
+
+             <%= image_tag(@startups[0].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[0].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+  
+      <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[1].name , @startups[1]%>
+                      <h5 style="color:#0088cc"> <%= @startups[1].category %><br>
+                      <%= @startups[1].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[1].avatar? %>   
+
+
+             <%= image_tag(@startups[1].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[1].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+     <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                      <%= link_to @startups[2].name , @startups[2]%>
+                     <h5 style="color:#0088cc">  <%= @startups[2].category %><br>
+                      <%= @startups[2].country %><br></h5>
+                  </div>
+
+              </div>
+               <% if @startups[2].avatar? %>   
+
+
+             <%= image_tag(@startups[2].avatar_url , :style=>"height:113px; width:200px;")     %>    
+               
+             <% end %>
+
+
+
+            <p><%=@startups[2].description[0,100]  %>..</p>
+
+
+          </div>
+        </li>
+        <li class="span2">
+            <div class="thumbnail" style="background-color:white;">
+               <div class="row-fluid">
+                  <div class="span3">
+
+                      <img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" style ="width:50px;height:50px;">
+                  </div>
+
+                  <div class="span9">
+                         <%= link_to @startups[3].name , @startups[3]%>
+                     <h5 style="color:#0088cc"> <%= @startups[3].category %><br>
+                      <%= @startups[3].country %><br></h5>
                   </div>
 
               </div>
