@@ -22,7 +22,7 @@ def create
 @profile = Profile.new(params[:profile])	
 @profile.wallet = 40000
 @profile.user_id =current_user.id
-@user.name = @profile.name
+@user.name = @profile.fullname
 
 if @profile.save
 
