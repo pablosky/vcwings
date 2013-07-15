@@ -35,7 +35,15 @@ class ActivitiesController < ApplicationController
   
   @activities = PublicActivity::Activity.where(trackable_id: @comments_ids )
 
-  
+  if (@activities == [] || @activities == nil)
+
+    @activities = nil
+    flash[:notice] = "no activities to show"  #puede ser mejorado mostrando en el momento de invertir mostrar la billetera
+      redirect_to dashboard_path 
+   
+
+  end
+
 
   # me guarda la id del comentario trackable_id y del user owner
 
