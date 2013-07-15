@@ -1,0 +1,139 @@
+
+<!-- Header and Nav -->
+  
+  <div class="container">
+  
+  <div class="row">    
+    
+    <!-- Main Content Section -->
+    <!-- This has been source ordered to come first in the markup (and on small devices) but to be to the right of the nav on larger screens -->
+     <div class="span3">
+        
+      <ul class="nav nav-list" style="background-color:#f5f5f5;">
+      	<li class="nav-header">List header</li>
+        <li class="dropdown"><a href="#">Section 1</a></li>
+        <div class="dropdown">
+  		<a class="dropdown-toggle" data-toggle="dropdown" href="#">Dropdown trigger</a>
+  		<ul class="dropdown-menu" role="menu" aria-labelledby="dLabel">
+  			 <li><a href="#">Section 2</a></li>
+      
+     		   <li><a href="#">Section 3</a></li>
+       			 <li><a href="#">Section 4</a></li>
+       			 <li><a href="#">Section 5</a></li>
+       
+       			 <li><a href="#">Section 6</a></li>
+     </ul>
+       </div>
+
+        
+      </ul>
+      
+      <p><img src="http://res.cloudinary.com/bogdecom/image/upload/v1371438372/mini_u2q4bn.png" /></p>
+        
+    </div>
+    
+
+
+    <div class="span9">
+      
+    		<% if flash[:notice] %>
+     		<h1 class="notice subheader"><%= flash[:notice] %></h1><BR>
+			 <% end %>
+
+			<h1> STARTUPS RANDOM SOLO JUEGO <h1>
+
+			<% @startups.each do |startup| %>
+
+
+			<%= link_to (image_tag startup.avatar_url(:thumbnail).to_s) , startup  %> 
+
+
+			<% end %>
+
+      <h1>NOTIFICACIONES</h1>
+
+    <% if @activities == nil %> 
+
+    <% else %>
+
+	<% @activities.each do |activity| %>
+
+	<div class="row-fluid">
+
+
+	<div class="span1">
+  
+
+    
+
+	</div>
+
+
+		<div class="span7">
+
+			 
+		<%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+
+
+
+
+
+		</div>
+
+		<div class="span4">
+
+
+
+		</div>
+
+
+
+
+ 
+
+
+
+	</div>
+
+	<br><br>
+		 <% end %>  <% end %> 
+	</div>
+				    
+    </div>
+    <!-- Nav Sidebar -->
+    <!-- This is source ordered to be pulled to the left on larger screens -->
+   
+
+    
+  
+  <!-- Footer -->
+  
+  <footer class="row">
+    <div class="span12">
+      <hr />
+      <div class="row">
+        <div class="span6">
+          <p>&copy; Copyright no one at all. Go to town.</p>
+        </div>
+        <div class="span6">
+         
+        </div>
+      </div>
+    </div> 
+  </footer>
+
+</div>
+
+
+
+
+
+
+
+
+
+
+  </div>
+
+
+

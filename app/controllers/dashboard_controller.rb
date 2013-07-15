@@ -37,7 +37,7 @@ if (@activities == [] || @activities == nil)
 
     @activities = nil
     flash[:notice] = "no activities to show"  #puede ser mejorado mostrando en el momento de invertir mostrar la billetera
-      redirect_to dashboard_path 
+    
    
 
   end
@@ -45,15 +45,8 @@ if (@activities == [] || @activities == nil)
 
 
 
+ 
 
-
-
-
-
-
-
-  
-  render :show
 
  end	
 
