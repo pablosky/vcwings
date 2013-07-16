@@ -40,15 +40,7 @@
      		<h1 class="notice subheader"><%= flash[:notice] %></h1><BR>
 			 <% end %>
 
-			<h1> STARTUPS RANDOM SOLO JUEGO <h1>
-
-			<% @startups.each do |startup| %>
-
-
-			<%= link_to (image_tag startup.avatar_url(:thumbnail).to_s) , startup  %> 
-
-
-			<% end %>
+			
 
       <h1>NOTIFICACIONES</h1>
 
@@ -72,8 +64,12 @@
 		<div class="span7">
 
 			 
-		<%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+		  <% if activity.trackable_type== "Comment" %>   
+      <%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+    <% else %>
 
+            <%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> Updated : <%= link_to activity.trackable.name, activity.trackable %>
+    <% end %>
 
 
 

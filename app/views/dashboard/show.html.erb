@@ -71,8 +71,14 @@
 
 		<div class="span7">
 
-			 
-		<%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+		<% if activity.trackable_type== "Comment" %>	 
+  	 	<%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
+    <% else %>
+
+        <%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> Updated :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %>
+    <% end %>
+
+
 
 
 

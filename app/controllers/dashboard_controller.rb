@@ -12,9 +12,11 @@ before_filter :authorize
  def index
 
 
-  @startups = Startup.order("random()").last(3)
-  @members = Member.where(user_id: current_user.id)# DONDE PERTENEZCO
+  #@startups = Startup.order("random()").last(3)
 
+ 
+
+  @members = Member.where(user_id: current_user.id)# DONDE PERTENEZCO
 
   @startups_ids = @members.collect(&:startup_id) #LAS STARTUPS DONDE PERTENEZCO
  
@@ -22,13 +24,27 @@ before_filter :authorize
 
   @comments_ids = @comments.collect(&:id) #LOS IDS DE LOS COM
 
+  
+
+  @investments = Investment.where(user_id: current_user.id) #mis inversiones
+
+  @startups_in_ids = @investments.collect(&:startup_id) #las id de las sups donde inverti
+
+  #@startups_act = PublicActivity::Activity.where(trackable_id: @startups_in_ids)# su actividad
+
+
   #@startups = Startup.find(@startups_ids)
 
   #@activities = PublicActivity::Activity.find_by_trackable_id(@comments_ids)#LAS ACTIVIDADES RELACIONADAS CON ESOS COMENTARIOS
    
   
-  @activities = PublicActivity::Activity.where(trackable_id: @comments_ids )
+  #@activities = PublicActivity::Activity.where(trackable_id: @comments_ids )
 
+  @activities = PublicActivity::Activity.where(trackable_id: [@comments_ids, @startups_in_ids]).order("created_at DESC")
+
+  #@activities =  @startups_act + @activities 
+
+  #@activities.sort
   
 
   # me guarda la id del comentario trackable_id y del user owner

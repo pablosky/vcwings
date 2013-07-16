@@ -5,18 +5,21 @@ class InicioController < ApplicationController
 
 def show
 
+	if signed_in?
 
-@s = Startup.count
-@e = User.count
+	 redirect_to '/dashboard'
 
-@startups = Startup.last(6)
+	else
+		@s = Startup.count
+		@e = User.count
 
+		@startups = Startup.last(6)
+	end
+
+
+end
 
 
 end
 
-def index
 
-end
-
-end

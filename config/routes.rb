@@ -1,12 +1,54 @@
 Prueba2::Application.routes.draw do
   
-    
+  # match '/session' =>  "clearance/sessions#create"
+  
+  # match '/sign_out' =>  "clearance/sessions#destroy"
+
+  # match '/sign_in' =>  "clearance/sessions#new"
+
+  # match '/sign_up' =>  "clearance/users#new"
+  
+
+
   get "activities/index"
 
   get 'activities/notificaciones'
   #get 'members/autocomplete_profile_name' , :on => :collection
 
-  
+  match 'dashboard' => 'dashboard#index'
+
+  #resource :session, controller: 'sessions'
+
+  resources :passwords,
+    :controller => 'clearance/passwords',
+    :only => [:create, :new]
+
+  resource :session,
+    :controller => 'clearance/sessions',
+    :only => [:create]
+
+  resources :users,
+    :controller => 'clearance/users',
+    :only => [:create] do
+      resource :password,
+        :controller => 'clearance/passwords',
+        :only => [:create, :edit, :update]
+    end
+
+  get '/sign_in' => 'clearance/sessions#new', :as => 'sign_in'
+  delete '/sign_out' => 'clearance/sessions#destroy', :as => 'sign_out'
+  get '/sign_up' => 'clearance/users#new', :as => 'sign_up'
+
+
+
+
+
+
+
+
+
+
+
   resources :activities
   resources :profiles 
   
@@ -35,14 +77,7 @@ Prueba2::Application.routes.draw do
   match ':controller(/:action(/:id))(.:format)'
 
 
-  match '/session' =>  "clearance/sessions#create"
-  
-  match '/sign_out' =>  "clearance/sessions#destroy"
-
-  match '/sign_in' =>  "clearance/sessions#new"
-
-  match '/sign_up' =>  "clearance/users#new"
-  
+ 
   #match '/:id' => "startups#show"
   
   # The priority is based upon order of creation:
@@ -99,9 +134,7 @@ Prueba2::Application.routes.draw do
 
 
   # See how all your routes lay out with "rake routes"
-  match "dashboard" => "dashboard#show"
-
-   match "game" => "dashboard#game"
+  match "game" => "dashboard#game"
   # This is a legacy wild controller route that's not recommended for RESTful applications.
   # Note: This route will make all actions in every controller accessible via GET requests.
     
