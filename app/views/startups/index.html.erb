@@ -1,3 +1,5 @@
+
+<div style="padding-left:1%;padding-rigth:1%;">
 <%- model_class = Startup.new.class -%>
 <h1 class="subheader"><%=t '.title', :default => model_class.model_name.human.pluralize %></h1>
 <table class="table table-striped">
@@ -24,7 +26,7 @@
         <td><%= link_to startup.id, startup_path(startup) %></td>
         <td><%= startup.name %></td>
         <td><%= startup.video %></td>
-        <td><%= startup.description %></td>
+        <td><%= startup.description[0,100] %></td>
         <td><%= startup.vmoney %></td>
         <td><%= startup.website %></td>
         <td><%= startup.category %></td>
@@ -64,3 +66,4 @@
   </p>
 <% end %>
 
+</div>

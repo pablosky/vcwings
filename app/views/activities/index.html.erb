@@ -4,13 +4,44 @@
 <p>Find me in app/views/activities/index.html.erb</p>
 
 
-<% @activities.each do |activity| %>
+
 
 <div class="row">
 
-  <%= activity.inspect %>
-<%= link_to "sadf" , "profiles/activity.owner" if activity.owner %>
 
+  <table class="table table-striped">
+  <thead>
+    <tr>
+      <th>activity.id </th>
+      <th>trackable_id</th>
+      <th>trackable_ type</th>
+      <th>owner_id</th>
+      <th>owner_type</th>
+      <th>key</th>
+      <th>created_At</th>
+      <th><%=t '.actions', :default => t("helpers.actions") %></th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @activities.each do |activity| %>
+      <tr>
+        <td><%= activity.id %></td>
+        <td><%= activity.trackable_id %></td>
+        <td><%= activity.trackable_type %></td>
+        <td><%= activity.owner_id %></td>
+        <td><%= activity.owner_type %></td>
+        <td><%= activity.key %></td>
+        <td><%= startup.created_at %></td>
+        <td>
+                     
+        </td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+ 
+
+ <br>
 
 </div>
- <% end %> 
+ 

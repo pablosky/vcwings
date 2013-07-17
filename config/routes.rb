@@ -48,7 +48,7 @@ Prueba2::Application.routes.draw do
 
 
 
-
+  resources :investments
   resources :activities
   resources :profiles 
   

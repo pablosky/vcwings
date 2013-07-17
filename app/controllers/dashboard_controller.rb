@@ -12,42 +12,45 @@ before_filter :authorize
  def index
 
 
-  #@startups = Startup.order("random()").last(3)
-
- 
+  #comentarios a mis startups o donde soymiembro
 
   @members = Member.where(user_id: current_user.id)# DONDE PERTENEZCO
 
   @startups_ids = @members.collect(&:startup_id) #LAS STARTUPS DONDE PERTENEZCO
  
+  
   @comments = Comment.where(startup_id: @startups_ids) #LOS COMENTARIOS A MIS STARTUPS
 
   @comments_ids = @comments.collect(&:id) #LOS IDS DE LOS COM
 
-  
+  #updates a las startups donde inverti
+  #Model.where('cat_id=? OR color=?', 5, 'grey')
 
-  @investments = Investment.where(user_id: current_user.id) #mis inversiones
+  #mis inversiones 
+
+  @investments = Investment.where('user_id=?', current_user.id  ) 
+
+  @investments = @investments + Investment.where('startup_id IN (?)', @startups_ids  )
+
 
   @startups_in_ids = @investments.collect(&:startup_id) #las id de las sups donde inverti
 
-  #@startups_act = PublicActivity::Activity.where(trackable_id: @startups_in_ids)# su actividad
+
+  #inversiones a mis startups
+
+ 
 
 
-  #@startups = Startup.find(@startups_ids)
 
-  #@activities = PublicActivity::Activity.find_by_trackable_id(@comments_ids)#LAS ACTIVIDADES RELACIONADAS CON ESOS COMENTARIOS
-   
+
+  @activities = PublicActivity::Activity.where(  trackable_id: [@comments_ids , @startups_in_ids ] ).order("created_at DESC")
+
+
+
+
+  #@activities = PublicActivity::Activity.where(  '(trackable_id IN (?)) OR (trackable_id IN (?) AND trackable_type IN(?) ) ' ,@comments_ids, @startups_in_ids , ['Investment','Update']).order("created_at DESC")
+
   
-  #@activities = PublicActivity::Activity.where(trackable_id: @comments_ids )
-
-  @activities = PublicActivity::Activity.where(trackable_id: [@comments_ids, @startups_in_ids]).order("created_at DESC")
-
-  #@activities =  @startups_act + @activities 
-
-  #@activities.sort
-  
-
-  # me guarda la id del comentario trackable_id y del user owner
 
 if (@activities == [] || @activities == nil)
 
@@ -98,15 +101,7 @@ end
 
 
 
-def plata
 
-
-  Profile.update_all(:wallet => 20000)
-
-  redirect_to "/profiles"
-
-	
-end
 
 def game
 

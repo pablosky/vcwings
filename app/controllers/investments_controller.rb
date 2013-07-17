@@ -1,5 +1,6 @@
 class InvestmentsController < ApplicationController
 
+
 before_filter :authorize
 
 def new
@@ -54,7 +55,8 @@ if @user.wallet >= @investment.vcmoney  && @investment.vcmoney >= 20000 #si el u
    	@startups.update_attribute(:vmoney, @startups.vmoney)
     @user.update_attribute(:wallet , @user.wallet - @investment.vcmoney )
 
-
+    @profile = Profile.find_by_user_id(current_user.id)
+    @investment.create_activity :create , owner: @profile 
     redirect_to @startups 
 
      else
@@ -100,6 +102,13 @@ def myinvestments
 
 @startups = Startup.find(@startups_ids)
 
+
+end
+
+
+def index
+
+@investments = Investment.all
 
 end
 

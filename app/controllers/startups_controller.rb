@@ -126,9 +126,12 @@ end
 
 
 
-  def update
-     @startup = Startup.find(params[:id])
+def update
+    
+    @startup = Startup.find(params[:id])
+    
     if @startup.update_attributes(params[:startup])
+       @investment.create_activity :update , owner: @profile 
       redirect_to @startup
     else
       render :edit

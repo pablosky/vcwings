@@ -1,14 +1,10 @@
-
-
-<div class= "row">
-
-<%= simple_form_for([@startups, @startups.investments.build]) do |f| %>
- 
-
-<%= f.input_field :vcmoney , :label =>"amount" , :value =>" 20000" , :id=>"inputi"%>
-
-
-<%= f.button :submit, :class => 'nice small radius blue button' , :value=>"Invest"  %>
- 
- <% end %>
-</div>
+<%= simple_form_for @investment, :html => { :class => 'form-horizontal' } do |f| %>
+  <%= f.input :user_id %>
+  <%= f.input :startup_id %>
+  <%= f.input :vcmoney %>
+  <div class="form-actions">
+    <%= f.button :submit, :class => 'btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                investments_path, :class => 'btn' %>
+  </div>
+<% end %>
