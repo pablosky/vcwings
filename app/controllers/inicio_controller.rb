@@ -13,7 +13,7 @@ def show
 		@s = Startup.count
 		@e = User.count
 
-		@startups = Startup.last(6)
+		@startups = Startup.last(12)
 	end
 
 

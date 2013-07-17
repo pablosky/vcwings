@@ -64,7 +64,7 @@
       <%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> commented :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> <!--if aplicable a los updats de startups igual --> 
       <% elsif activity.trackable_type== "Investment"%>
 
-        hola soy investment
+        <%= link_to activity.owner.name  , :controller => :profiles , :action => :user, :id=> activity.owner.id if activity.owner_type ="User" %> Invested :  on <%= link_to activity.trackable.startup.name, activity.trackable.startup %> 
 
       <% else %>
 

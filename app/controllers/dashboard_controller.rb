@@ -30,20 +30,16 @@ before_filter :authorize
 
   @investments = Investment.where('user_id=?', current_user.id  ) 
 
-  @investments = @investments + Investment.where('startup_id IN (?)', @startups_ids  )
+  @investments2 = Investment.where('startup_id IN (?)', @startups_ids  )
 
+  @investments_ids = @investments2.collect(&:id)
 
   @startups_in_ids = @investments.collect(&:startup_id) #las id de las sups donde inverti
 
 
   #inversiones a mis startups
 
- 
-
-
-
-
-  @activities = PublicActivity::Activity.where(  trackable_id: [@comments_ids , @startups_in_ids ] ).order("created_at DESC")
+   @activities = PublicActivity::Activity.where(  trackable_id: [@comments_ids , @startups_in_ids, @investments_ids ] ).order("created_at DESC")
 
 
 
