@@ -1,0 +1,23 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  namecounter: 
+  websitecounter: 
+  videocounter: 
+  logocounter: 
+  visitcounter: 
+  feedbackcounter: 
+  moneycounter: 
+  textpitchcounter: 
+  startup: 
+
+two:
+  namecounter: 
+  websitecounter: 
+  videocounter: 
+  logocounter: 
+  visitcounter: 
+  feedbackcounter: 
+  moneycounter: 
+  textpitchcounter: 
+  startup: 
