@@ -106,7 +106,9 @@ flash[:notice] = "barza no te puedes autovotar"
 
 ##falta condicion del compadre q no sea user
 
-elsif @com.commenter != current_user.email 
+else
+
+# @com.commenter != current_user.email 
 
 
 @com.nolike = @com.nolike + 1

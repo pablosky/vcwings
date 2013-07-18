@@ -20,16 +20,16 @@
   		<BR>
 
   		<div class="btn-group">
-  			<a class="btn btn-primary" href="/comments/like?idea=<%= comment.id%>" > <i class="icon-thumbs-up"></i></a>
-  			<a class="btn btn-primary" href="/comments/like?ide=<%= comment.id%>"><i class="icon-thumbs-down"></i></a>
+  			<a class="btn btn-primary" href="/comments/like?idea=<%= comment.id %>" > <i class="icon-thumbs-up"></i></a>
+  			<a class="btn btn-primary" href="/comments/nolike?ide=<%= comment.id %>"><i class="icon-thumbs-down"></i></a>
   		</div>
 
 
 
   		
 
-  		likes:<%= comment.like %> 
-  		no likes: <%= comment.nolike %> 
+  		<h6 class=subheader>likes:<%= comment.like %> 
+  		no likes: <%= comment.nolike %> </h6> 
  		</div>
     </div>	
 
