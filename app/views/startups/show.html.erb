@@ -24,9 +24,22 @@
 
           <br>
 
-          <h3 style="color:#0088cc;">Startup Pitch</h3>
 
-          <%= @startup.description %> 
+          <ul class="nav nav-tabs">
+            <li><a href="#home" data-toggle="tab"><h4 style="color:#0088cc;">Startup Pitch</h3>
+            </a></li>
+            <li><a href="#profile" data-toggle="tab"><h4 style="color:#0088cc;">Members</h3></a>
+            </li>
+            
+          </ul>
+
+
+          <div class="tab-content">
+            <div class="tab-pane active" id="home"><%= @startup.description %> </div>
+            <div class="tab-pane" id="profile"><%= render @startup.members %></div>
+            
+          </div>
+
           <H3>_________________________________________________________</H3>
 
           <h4 class="subheader"> FeedBack </h4>
@@ -42,15 +55,15 @@
             <%= f.hidden_field :commenter , :value => current_user.email  %>
   
 
-              <%= f.text_area :body , :style=>"height:74px;width:534px;"%>
-             <%= f.hidden_field :startup_id , :value => @startup.id  %><br> 
+            <%= f.text_area :body , :style=>"height:74px;width:534px;"%>
+            <%= f.hidden_field :startup_id , :value => @startup.id  %><br> 
   
    
-              <%= f.button :submit , :class => 'btn' , :id =>"Comment" %>
+            <%= f.button :submit , :class => 'btn' , :id =>"Comment" %>
   
-  <% end %> <!--fin del form -->
+            <% end %> <!--fin del form -->
 
-  <%end%><!--fin del if -->
+             <%end%><!--fin del if -->
 
 
 

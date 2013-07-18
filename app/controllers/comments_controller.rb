@@ -93,7 +93,7 @@ end
 
 def nolike
 
-@com = Comment.find(params[:ide])
+@com = Comment.find(:ide)
 
 
 
@@ -114,9 +114,6 @@ else
 @com.nolike = @com.nolike + 1
 
 @com.save
-
-
-
 
 redirect_to startup_path(@com.startup_id)
 
