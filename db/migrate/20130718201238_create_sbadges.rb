@@ -1,14 +1,14 @@
 class CreateSbadges < ActiveRecord::Migration
   def change
     create_table :sbadges do |t|
-      t.int :namecounter
-      t.int :websitecounter
-      t.int :videocounter
-      t.int :logocounter
-      t.int :visitcounter
-      t.int :feedbackcounter
-      t.int :moneycounter
-      t.int :textpitchcounter
+      t.integer :namecounter
+      t.integer :websitecounter
+      t.integer :videocounter
+      t.integer :logocounter
+      t.integer :visitcounter
+      t.integer :feedbackcounter
+      t.integer :moneycounter
+      t.integer :textpitchcounter
       t.references :startup
 
       t.timestamps
