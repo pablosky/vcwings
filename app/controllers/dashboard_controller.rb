@@ -103,12 +103,54 @@ def game
 
 @startups = Startup.order("random()").last(3)
 
+
+
 @investments = Investment.new
 
 end
 
 
 
+
+def rate 
+
+@rates = Sbadge.find_by_startup_id(params[:startup_id])
+
+
+
+if @rates == [] || @rates = nil
+
+ @rates = Sbadge.new(params[:sbadge]) 
+ 
+  if @rates.save
+
+    redirect_to dashboard_path
+    flash[:notice]= "grabado"
+  end
+else
+
+  redirect_to dashboard_path
+  flash[:notice]="no grabado"
+
+end 
+# if @rate == []
+
+#   @rate = Sbadge.new
+#   @rate.namecounter =:namecounter
+#   @rate.startup_id = :startup_id
+#   #:feedbackcounter, :logocounter, :moneycounter, :namecounter, :textpitchcounter, :videocounter, :visitcounter, :websitecounter
+  
+#   redirect_to 'game'
+
+# else
+
+#   @rate.namecounter = @rate.namecounter + :name 
+
+#    redirect_to 'game'
+
+# end
+
+end
 
 
 end

@@ -7,7 +7,7 @@ include Rails.application.routes.url_helpers
 attr_accessible :name, :video, :vmoney , :website ,:founder , :description ,:website , :category , :revenue , :stage ,:country , :semail , :avatar
 
 
-
+has_many :rates
 has_many :members
 has_many :users , :through => :members
 has_many :comments

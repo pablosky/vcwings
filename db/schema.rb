@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130626161052) do
+ActiveRecord::Schema.define(:version => 20130718201238) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -114,6 +114,22 @@ ActiveRecord::Schema.define(:version => 20130626161052) do
   end
 
   add_index "roles", ["user_id"], :name => "index_roles_on_user_id"
+
+  create_table "sbadges", :force => true do |t|
+    t.integer  "namecounter"
+    t.integer  "websitecounter"
+    t.integer  "videocounter"
+    t.integer  "logocounter"
+    t.integer  "visitcounter"
+    t.integer  "feedbackcounter"
+    t.integer  "moneycounter"
+    t.integer  "textpitchcounter"
+    t.integer  "startup_id"
+    t.datetime "created_at",       :null => false
+    t.datetime "updated_at",       :null => false
+  end
+
+  add_index "sbadges", ["startup_id"], :name => "index_sbadges_on_startup_id"
 
   create_table "startups", :force => true do |t|
     t.string   "name"

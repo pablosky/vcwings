@@ -1,5 +1,7 @@
 Prueba2::Application.routes.draw do
   
+  resources :rates
+
   # match '/session' =>  "clearance/sessions#create"
   
   # match '/sign_out' =>  "clearance/sessions#destroy"
@@ -47,7 +49,7 @@ Prueba2::Application.routes.draw do
 
 
 
-
+  
   resources :investments
   resources :activities
   resources :profiles 

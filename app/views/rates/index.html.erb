@@ -1,0 +1,37 @@
+<h1>Listing rates</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Startup</th>
+    <th>Name</th>
+    <th>Website</th>
+    <th>Video</th>
+    <th>Logo</th>
+    <th>Text</th>
+    <th>Idea</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @rates.each do |rate| %>
+  <tr>
+    <td><%= rate.user %></td>
+    <td><%= rate.startup %></td>
+    <td><%= rate.name %></td>
+    <td><%= rate.website %></td>
+    <td><%= rate.video %></td>
+    <td><%= rate.logo %></td>
+    <td><%= rate.text %></td>
+    <td><%= rate.idea %></td>
+    <td><%= link_to 'Show', rate %></td>
+    <td><%= link_to 'Edit', edit_rate_path(rate) %></td>
+    <td><%= link_to 'Destroy', rate, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Rate', new_rate_path %>

@@ -77,9 +77,7 @@
 					<h3 style="color:white;">_____________________</h3>	
 					<br><center>
 					<%= simple_form_for([@startups[0], @startups[0].investments.build]) do |s| %>
- 
-
-					<%= s.input_field :vcmoney , :label =>"amount" , :value =>" 20000" , :id=>"inputi"%>
+					<%= s.input_field :vcmoney , :label =>"amount" , :value =>" 20000" , :id=>"inputi" %>
 
 					<br>
 					<%= s.button :submit, :class => 'btn' , :value=>"Invest"  %>
@@ -96,118 +94,30 @@
 					<div class="span2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
 
 					<div class="span9">
-					
-					<button class="btn btn-large btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RATE THIS STARTUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
- 					
-					<label class="radio inline">
-					 Startup Name <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					 
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
 				
-					</label> <br>
 
 
+					      <%= simple_form_for ( [@startups[0] ) do |r|%>
+					      
 
-					<label class="radio inline">
-					 Text Pitch <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					 
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				
-					</label><br>
+					      
+					      <button class="btn btn-large btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RATE THIS STARTUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button>
+ 						
+ 						Name <%= r.radio_button :namecounter, :value=> 1 %>
+                    	<%= r.radio_button :namecounter, :value=> "2" %>
+                    		
+                    	 <%= r.radio_button :namecounter, :value=> "3" %>
+						 <%= r.hidden_field :startup_id , :value=> @startups[0].id %>
+					     <% end %>
+						  
 
+						  
+						
+					     
 
+					
 
-					<label class="radio inline">
-					 Video Pitch <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					 
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				
-					</label><br>
-
-
-					<label class="radio inline">
-					 Idea <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					 
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-				
-					</label><br>
-
-
-					<label class="radio inline">
-					 Logo <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
-					 
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-					<label class="radio inline">
-					  <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
-					
-					</label>
-				    <br>
-
-
+						
 
 
 
