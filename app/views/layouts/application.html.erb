@@ -214,6 +214,28 @@ $('.carousel').carousel({
 
 </script>
 
+
+
+<script type="text/javascript" charset="utf-8">
+
+$(document).ready(function() {
+   
+  
+    $("#boton1").click(function() {
+       document.getElementById("boton1").disabled = true;
+       document.getElementById("boton2").disabled = false;
+         });
+    
+    $("#boton2").click(function() {
+       document.getElementById("boton1").disabled = false;
+        document.getElementById("boton2").disabled = true; 
+         });
+
+    
+});
+
+</script>
+
 </body>
 </html>
 

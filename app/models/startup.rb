@@ -4,10 +4,9 @@ include PublicActivity::Common
 
 
 include Rails.application.routes.url_helpers
-attr_accessible :name, :video, :vmoney , :website ,:founder , :description ,:website , :category , :revenue , :stage ,:country , :semail , :avatar
+attr_accessible :name, :video, :vmoney , :website ,:founder , :description ,:website , :category , :revenue , :stage ,:country , :semail , :avatar, :posidea , :negidea , :postext , :negtext , :poswebsite , :negwebsite , :poslogo , :neglogo ,:posvideo , :negvideo 
 
 
-has_many :rates
 has_many :members
 has_many :users , :through => :members
 has_many :comments

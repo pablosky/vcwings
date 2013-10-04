@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20130718201238) do
+ActiveRecord::Schema.define(:version => 20130916225642) do
 
   create_table "activities", :force => true do |t|
     t.integer  "trackable_id"
@@ -106,6 +106,22 @@ ActiveRecord::Schema.define(:version => 20130718201238) do
 
   add_index "profiles", ["user_id"], :name => "index_profiles_on_user_id"
 
+  create_table "rates", :force => true do |t|
+    t.integer  "user_id"
+    t.integer  "startup_id"
+    t.integer  "name"
+    t.integer  "website"
+    t.integer  "video"
+    t.integer  "logo"
+    t.integer  "text"
+    t.integer  "idea"
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
+  end
+
+  add_index "rates", ["startup_id"], :name => "index_rates_on_startup_id"
+  add_index "rates", ["user_id"], :name => "index_rates_on_user_id"
+
   create_table "roles", :force => true do |t|
     t.string   "role"
     t.integer  "user_id"
@@ -137,8 +153,8 @@ ActiveRecord::Schema.define(:version => 20130718201238) do
     t.text     "description"
     t.integer  "vmoney"
     t.string   "website"
-    t.datetime "created_at",  :null => false
-    t.datetime "updated_at",  :null => false
+    t.datetime "created_at",   :null => false
+    t.datetime "updated_at",   :null => false
     t.string   "category"
     t.string   "country"
     t.string   "stage"
@@ -146,6 +162,20 @@ ActiveRecord::Schema.define(:version => 20130718201238) do
     t.string   "semail"
     t.string   "avatar"
     t.string   "slug"
+    t.integer  "postext"
+    t.integer  "posidea"
+    t.integer  "posname"
+    t.integer  "poswebsite"
+    t.integer  "posvideo"
+    t.integer  "poslogo"
+    t.integer  "commentcount"
+    t.integer  "visitcount"
+    t.integer  "negtext"
+    t.integer  "negidea"
+    t.integer  "negname"
+    t.integer  "negwebsite"
+    t.integer  "negvideo"
+    t.integer  "neglogo"
   end
 
   add_index "startups", ["slug"], :name => "index_startups_on_slug"

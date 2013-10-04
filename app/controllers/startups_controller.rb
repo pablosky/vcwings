@@ -184,6 +184,21 @@ end
 
 
 
+
+ def feedback
+
+
+@startupf = Startup.new
+
+@startupf.posvideo = :posvideo
+
+
+
+
+
+ end
+
+
  
 
 

@@ -7,7 +7,7 @@ class User < ActiveRecord::Base
    has_one :profile
    has_many :members
    has_many :startups , :through => :members
-   has_many :rates
+   
 
 
  ROLES = %w[admin moderator author banned]
