@@ -1,5 +1,7 @@
 Prueba2::Application.routes.draw do
   
+  match '/rate' => 'rater#create', :as => 'rate'
+
   resources :rates
 
   # match '/session' =>  "clearance/sessions#create"

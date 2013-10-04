@@ -3,7 +3,7 @@ source 'http://rubygems.org'
 gem 'rails', '3.2.6'
 gem "clearance"
 gem 'carrierwave'
-
+gem 'letsrate'
 gem 'simple_form'
 gem "mini_magick"
 gem 'rails3-jquery-autocomplete'

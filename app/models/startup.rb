@@ -2,6 +2,7 @@ class Startup < ActiveRecord::Base
 
 include PublicActivity::Common
 
+letsrate_rateable "video", "name", "logo" , "website" , "idea" , "pitch"
 
 include Rails.application.routes.url_helpers
 attr_accessible :name, :video, :vmoney , :website ,:founder , :description ,:website , :category , :revenue , :stage ,:country , :semail , :avatar, :posidea , :negidea , :postext , :negtext , :poswebsite , :negwebsite , :poslogo , :neglogo ,:posvideo , :negvideo 
