@@ -1,6 +1,10 @@
 class User < ActiveRecord::Base
+   
+   #require "BCrypt"
+
    include Clearance::User
-	attr_accessible :role, :name
+   
+   attr_accessible :role, :name
 
    letsrate_rater
   # has_and_belongs_to_many :roles
