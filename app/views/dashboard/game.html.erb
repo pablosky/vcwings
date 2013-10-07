@@ -102,11 +102,15 @@
 
 					     
 					      
-					      <button class="btn btn-large btn-danger">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RATE THIS STARTUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button><br><br>
+					      <button class="btn btn-large btn-danger disabled">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;RATE THIS STARTUP&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</button><br><br>
  						
                            Idea: <%= rating_for @startups[0], "idea" %>
 						   Website : <%= rating_for @startups[0], "website" %>
+						   Name : <%= rating_for @startups[0], "name" %>
 						   Logo : <%= rating_for @startups[0], "logo" %>
+						   Pitch <%= rating_for @startups[0], "pitch" %>
+						   Video : <%= rating_for @startups[0], "video" %>
+
 
 					     <!-- FINDE FEEDBACK -->
 						  

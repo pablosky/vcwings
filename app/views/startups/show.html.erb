@@ -74,9 +74,13 @@
 
     <div class="span4">
 
-        Idea: <%= rating_for @startup, "idea" %>
-               Website : <%= rating_for @startup, "website" %>
-               Logo : <%= rating_for @startup, "logo" %>
+       
+                Idea: <%= rating_for @startups[0], "idea" %>
+               Website : <%= rating_for @startups[0], "website" %>
+               Name : <%= rating_for @startups[0], "name" %>
+               Logo : <%= rating_for @startups[0], "logo" %>
+               Pitch <%= rating_for @startups[0], "pitch" %>
+               Video : <%= rating_for @startups[0], "video" %>
 
 
     </div>
