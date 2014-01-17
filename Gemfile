@@ -24,16 +24,15 @@ gem 'carrierwave'
 gem 'public_activity'
 gem 'cloudinary'
 gem 'therubyracer'
-gem 'less-rails' 
-gem 'twitter-bootstrap-rails'
-# Gems used only for assets and not required
+
+gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'# Gems used only for assets and not required
 # in production environments by default.
 group :assets do
 
   gem 'uglifier', '>= 1.0.3'
   
  
-  gem 'libv8', "~> 3.11.8"
+ 
  
   gem "chosen-rails", "~> 0.9.12"
  #gem "simple_form", "~> 2.1.0"
