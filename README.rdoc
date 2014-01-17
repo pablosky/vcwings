@@ -259,3 +259,5 @@ vendor
   External libraries that the application depends on. Also includes the plugins
   subdirectory. If the app has frozen rails, those gems also go here, under
   vendor/rails/. This directory is in the load path.
+
+  https://www.codeship.io/projects/c7c3cca0-61d2-0131-3fd3-367b94dc0d60/status
